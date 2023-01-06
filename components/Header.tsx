@@ -8,12 +8,12 @@ export default function Header({ }: Props) {
         <header className='p-5 sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
             <motion.div
                 initial={{
-                    y: -50,
+                    x: -500,
                     opacity: 0,
                     scale: 0.5
                 }}
                 animate={{
-                    y: 0,
+                    x: 0,
                     opacity: 1,
                     scale: 1,
                     speed: .5
@@ -35,17 +35,32 @@ export default function Header({ }: Props) {
                     fgColor='grey'
                     url='https://www.linkedin.com/in/md-amanullah-parvez-10a543207/'
                 />
+                <SocialIcon
+                    target="_blank"
+                    bgColor='transparent'
+                    fgColor='grey'
+                    url='https://github.com/parvezaman'
+                />
+                <SocialIcon
+                    target="_blank"
+                    bgColor='#242424'
+                    fgColor='grey'
+                    // className='border border-5 border-[#242424] rounded-full text-xs'
+                    style={{ border: "solid 8px #242424", borderRadius: "50%", height: 50, width: 50 }}
+                    // network='stackOverflow'
+                    url='https://stackoverflow.com/users/16839088/amanullah'
+                />
                 {/* <SocialIcon target="_blank" url='' /> */}
             </motion.div>
 
             <motion.div
                 initial={{
-                    y: 50,
+                    x: 500,
                     opacity: 0,
                     scale: 0.5
                 }}
                 animate={{
-                    y: 0,
+                    x: 0,
                     opacity: 1,
                     scale: 1,
                     speed: .5

@@ -2,7 +2,7 @@ import React from "react"
 import { Cursor, useTypewriter } from "react-simple-typewriter"
 import HeroCircle from "./HeroCircle"
 import Image from 'next/image'
-import manOnBoat from '../assets/myImages/2.jpg'
+import myImg from '../assets/myImages/2.jpg'
 import Link from "next/link"
 
 type Props = {}
@@ -23,7 +23,7 @@ export default function Hero({ }: Props) {
                     border: "1px solid grey"
                 }}
                 className="relative rounded-full h-40 w-40 mx-auto object-cover"
-                src={manOnBoat}
+                src={myImg}
                 alt="image of Aman"
             />
             {/* <br /> */}
