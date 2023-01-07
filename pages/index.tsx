@@ -6,6 +6,8 @@ import Hero from '../components/Hero/Hero'
 import About from '../components/About/About'
 import WorkExperiences from '../components/Experiences/WorkExperiences'
 import Skills from '../components/Skills/Skills'
+import Projects from '../components/Projects/Projects'
+import ContactMe from '../components/ContactMe/ContactMe'
 
 export default function Home() {
   return (
@@ -13,31 +15,32 @@ export default function Home() {
       <Head>
         <title>Portfolio: Md. Amnaullah Parvez</title>
       </Head>
-      {/* Header component goes here */}
+
       <Header />
 
-      {/* Hero component goes here */}
       <section id='hero' className='snap-start'>
         <Hero />
       </section>
 
-      {/* About component goes here */}
       <section id='about' className='snap-center'>
         <About />
       </section>
 
-      {/* Experience */}
       <section id='experiences' className='snap-center'>
         <WorkExperiences />
       </section>
 
-      {/* Skills */}
       <section id='skills' className='snap-start'>
         <Skills />
       </section>
-      {/* Projects */}
 
-      {/* Contact me */}
+      <section id='projects' className='snap-start'>
+        <Projects />
+      </section>
+
+      <section id='contact' className='snap-start'>
+        <ContactMe />
+      </section>
     </div>
   )
 }
