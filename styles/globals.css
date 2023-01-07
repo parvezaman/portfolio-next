@@ -114,4 +114,7 @@ a {
   .heroButton {
     @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-300 transition-all hover:border-[#ae7836aa] hover:text-[#ffc884aa]
   }
+  .contactInput{
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-400 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40
+  }
 }

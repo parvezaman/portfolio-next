@@ -18,10 +18,10 @@ export default function WorkExperiences({ }: Props) {
             </h3>
 
             <div
-                className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory mt-32'
+                className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory mt-32 scrollbar scrollbar-thumb-blue-600 scrollbar-thumb-rounded'
             >
                 <ExperienceCards />
-                <ExperienceCards2/>
+                <ExperienceCards2 />
             </div>
         </motion.div>
     )

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import myImg from '../../assets/myImages/6.jpg'
+import myImg from '../../assets/myImages/5.jpg'
 import Image from 'next/image'
 
 type Props = {}
