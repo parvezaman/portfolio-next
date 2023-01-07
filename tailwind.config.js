@@ -6,6 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {},
-  },
-  plugins: [],
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      square: 'square',
+      roman: 'upper-roman',
+    },
+    plugins: [
+      // require('tailwind-scrollbar'),
+    ],
+  }
 }

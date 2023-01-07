@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import myImg from '../assets/myImages/6.jpg'
+import myImg from '../../assets/myImages/6.jpg'
 import Image from 'next/image'
 
 type Props = {}
@@ -13,10 +13,10 @@ export default function About({ }: Props) {
             transition={{ duration: 2 }}
             className='h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
         >
-            <h3 className='absolute top-16 uppercase tracking-[20px] text-gray-400 text-2xl'>
+            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-400 text-2xl'>
                 About
             </h3>
-            
+
             <motion.img
                 src={myImg.src}
                 initial={{

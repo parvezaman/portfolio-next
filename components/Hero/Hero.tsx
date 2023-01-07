@@ -1,9 +1,9 @@
 import React from "react"
 import { Cursor, useTypewriter } from "react-simple-typewriter"
-import HeroCircle from "./HeroCircle"
 import Image from 'next/image'
-import myImg from '../assets/myImages/2.jpg'
+import myImg from '../../assets/myImages/2.jpg'
 import Link from "next/link"
+import HeroCircle from "./HeroCircle"
 
 type Props = {}
 
@@ -40,11 +40,11 @@ export default function Hero({ }: Props) {
                     <Link href="#about">
                         <button className="heroButton">About</button>
                     </Link>
-                    <Link href="#skills">
-                        <button className="heroButton">Skills</button>
-                    </Link>
                     <Link href="#experiences">
                         <button className="heroButton">Experience</button>
+                    </Link>
+                    <Link href="#skills">
+                        <button className="heroButton">Skills</button>
                     </Link>
                     <Link href="#projects">
                         <button className="heroButton">Projects</button>
