@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import { FaReact } from 'react-icons/fa'
 
-type Props = { skill: { name: string, icon: string, strength: string } }
+type Props = { skill: { name: string, icon: Element, strength: string } }
 
 export default function Skill({ skill }: Props) {
     // console.log(skill);
