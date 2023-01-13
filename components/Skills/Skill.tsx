@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import { FaReact } from 'react-icons/fa'
 
-type Props = { directionLeft?: boolean, skill?: object }
+type Props = { skill: { name: string, icon: string, strength: string } }
 
-export default function Skill({ directionLeft, skill }: Props) {
+export default function Skill({ skill }: Props) {
     // console.log(skill);
     return (
         <div className='group relative flex cursor-pointer'>
