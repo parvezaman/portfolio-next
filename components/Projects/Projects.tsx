@@ -2,6 +2,8 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { MdOpenInBrowser } from "react-icons/md";
+import { VscGithubInverted, VscServer } from 'react-icons/vsc';
 
 type Props = {}
 
@@ -13,7 +15,9 @@ export default function Projects({ }: Props) {
             description: "This is a niche website, dedicated to sell cameras. This site has features like, Fully responsible to the dasktop and mobile devices.Home page shows only 6 products; all products are in All Cameras tab.Buy Me Now button will take you through a private route. ie. after loging in or registration you will be redirected to the exact place where yhou wanted to go. Purchase page will show you details of the product you are about to buy as well as it will take your shipping address. Your login info will be saved into our MongoDB database. DashBoard has two types of routing ie. public and admin. If You are a admin you can access the database like you cane add new product, delete any product, modify or cancel orders etc. public bashboard shows payment, my orders, review and logout",
             link: "https://shop-and-shoot.web.app/",
             image: "https://i.ibb.co/BPW0cCB/1-1-Carousel.jpg",
-            techsUsed: ['Axios', 'DotEnv', 'Express', 'Firebase', 'Material UI', 'MongoDb', 'React', 'Bootstrap', 'React Icons', 'REST API']
+            techsUsed: ['Axios', 'DotEnv', 'Express', 'Firebase', 'Material UI', 'MongoDb', 'React', 'Bootstrap', 'React Icons', 'REST API'],
+            gitHubFront: "https://github.com/parvezaman/niche-website-client-side-parvezaman",
+            gitHubBack: "https://github.com/parvezaman/niche-website-server-side-parvezaman",
         },
         {
             id: 2,
@@ -21,7 +25,9 @@ export default function Projects({ }: Props) {
             description: "TravelTheWorld is a Tourism management site. A company has taken the responsibility to assure you the cheapest and safest tourism around the globe. We will guide you through our own tour guides as well as assuring your habitat and eatings throughout the travelling time. This website has features like, Fully Responsible to your device.Home page has the services we provide. You can book your desired package/packages right from the home page. You can see Your Bookings if you are logged in. If not, don't worry we will take you through login.You also can see all bookings page (management page). Booking page shows details info of the package and conformation form. After filling the form your desired package will be stored in our database.database is hosted in Heroku",
             link: "https://travel-the-world-11a88.web.app/",
             image: "https://i.ibb.co/41mHwdP/3.jpg",
-            techsUsed: ['Axios', 'Dotenv', 'Express', 'Firebase', 'MongoDb', 'React', 'Bootstrap', 'React Hook Form', 'React Icons', 'REST API']
+            techsUsed: ['Axios', 'Dotenv', 'Express', 'Firebase', 'MongoDb', 'React', 'Bootstrap', 'React Hook Form', 'React Icons', 'REST API'],
+            gitHubFront: "https://github.com/parvezaman/tourism-or-delivery-website-client-side-parvezaman",
+            gitHubBack: "https://github.com/parvezaman/tourism-or-delivery-website-server-side-parvezaman",
         },
         {
             id: 3,
@@ -29,9 +35,14 @@ export default function Projects({ }: Props) {
             description: "A tamplate website to do pricing of a product based on various services associated with the product. In this particular project a Mac Book was taked as example. Based on Memory, Storage and delivary option price can be varied. Also there is a Cupon system. By providing specific Cupon 20% discount will be applied. In this case the cupon code is 'stevekaku'. Give it a try!",
             link: "https://assignment-5-parvezaman.netlify.app/",
             image: "https://i.ibb.co/6sbzdFx/1-1-bg.jpg",
-            techsUsed: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap']
+            techsUsed: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+            gitHubFront: "https://github.com/parvezaman/mac-book-pro-parvezaman",
+            gitHubBack: "",
         },
     ]
+
+    const iconClasses = 'text-xl md:text-4xl text-rose-400 hover:text-rose-500 ease-in-out duration-300 mx-3'
+
     return (
         <motion.div
             initial={{
@@ -64,6 +75,27 @@ export default function Projects({ }: Props) {
                                 className="h-24 md:h-72"
                                 alt=""
                             />
+                            <div className='flex'>
+                                {project.link !== "" ?
+                                    <a href={project.link} target="_blank" rel="noreferrer" >
+                                        <MdOpenInBrowser
+                                            className={iconClasses}
+                                        />
+                                    </a> : ""}
+                                {project.gitHubFront !== "" ?
+                                    <a href={project.gitHubFront} target="_blank" rel="noreferrer">
+                                        <VscGithubInverted
+                                            className={iconClasses}
+                                        />
+                                    </a> : ""}
+                                {project.gitHubBack !== "" ?
+                                    <a href={project.gitHubBack} target="_blank" rel="noreferrer">
+                                        <VscServer
+                                            className={iconClasses}
+                                        />
+                                    </a> : ""}
+
+                            </div>
 
                             <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                                 <h4 className='text-4xl font-semibold text-center'>
@@ -71,6 +103,7 @@ export default function Projects({ }: Props) {
                                         {project.title}
                                     </span>
                                 </h4>
+
 
                                 <p className='text-sm text-center md:text-left'>{project.description}</p>
                             </div>
