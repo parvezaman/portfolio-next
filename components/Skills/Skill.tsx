@@ -14,7 +14,7 @@ export default function Skill({ skill }: Props) {
                 whileInView={{ opacity: 1, x: 0 }}
             >
                 <div className='flex flex-col items-center'>
-                    {skill.icon}
+                    <>{skill.icon}</>
                     <p>
                         {skill.name}
                     </p>
