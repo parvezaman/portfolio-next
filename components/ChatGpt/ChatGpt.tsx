@@ -11,13 +11,9 @@ const ChatGpt = ({ }: Props) => {
     const [result, setResult] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const myKey = process.env.REACT_APP_OPENAI_API_KEY
-
-    const config = new Configuration({ apiKey: myKey });
+    const config = new Configuration({ apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY });
     const openai = new OpenAIApi(config);
 
-
-    // console.log(myKey);
     const handleSubmit = async () => {
         setLoading(true);
         try {
@@ -28,7 +24,12 @@ const ChatGpt = ({ }: Props) => {
                 max_tokens: 100
             })
             // console.log(response);
-            setResult(response.data.choices[0].text)
+            // setResult(response.data.choices[0].text)
+            if (response && response.data && response.data.choices && response.data.choices.length > 0) {
+                setResult(response.data.choices[0].text || "");
+            } else {
+                console.log('Invalid response:', response);
+            }
         }
         catch (error) {
             console.log(error);
