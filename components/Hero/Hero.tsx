@@ -52,6 +52,9 @@ export default function Hero({ }: Props) {
                     <Link href="#contact">
                         <button className="heroButton">Contact Me</button>
                     </Link>
+                    <Link href="#chatgpt">
+                        <button className="heroButton">ChatGPT</button>
+                    </Link>
                 </div>
             </div>
         </div>

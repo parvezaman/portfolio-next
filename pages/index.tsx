@@ -11,6 +11,7 @@ import Projects from '../components/Projects/Projects'
 import ContactMe from '../components/ContactMe/ContactMe'
 import Link from 'next/link'
 import myImg from '../assets/myImages/6.jpg'
+import ChatGpt from '../components/ChatGpt/ChatGpt'
 
 export default function Home() {
   return (
@@ -43,6 +44,10 @@ export default function Home() {
 
       <section id='contact' className='snap-start'>
         <ContactMe />
+      </section>
+
+      <section id='chatgpt' className='snap-start'>
+        <ChatGpt />
       </section>
 
       <Link href="#hero">
