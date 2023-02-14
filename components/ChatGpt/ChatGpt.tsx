@@ -39,17 +39,18 @@ const ChatGpt = ({ }: Props) => {
     return (
         <div className="h-screen flex flex-col items-center justify-center text-center overflow-hidden">
             {/* <div className='flex flex-col items-center justify-center'> */}
+            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-400 text-2xl'>Hello to ChatGPT</h3>
             <textarea
                 // type="text"
                 value={prompt}
                 onChange={e => setPrompt(e.target.value)}
                 placeholder="So... What was wriggling in your precious head???"
-                className='contactInput md:w-96 h-48'
+                className='contactInput w-96 h-48'
             />
             <button
                 onClick={handleSubmit}
                 disabled={loading || prompt.length === 0}
-                className="bg-[#aa5403] py-5 px-10 rounded-md text-gray-300 font-bold md:w-96"
+                className="bg-[#aa5403] py-5 px-10 rounded-md text-gray-300 font-bold w-96"
             >
                 {loading ? "Generating..." : "Generate"}
             </button>
