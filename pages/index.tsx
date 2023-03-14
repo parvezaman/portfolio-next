@@ -50,7 +50,7 @@ export default function Home() {
         <ChatGpt />
       </section>
 
-      <Link href="#hero">
+      {/*  <Link href="#hero">
         <footer className='sticky bottom-5 w-full cursor-pointer'>
           <div className='flex items-center justify-end'>
             <img
@@ -58,7 +58,7 @@ export default function Home() {
               src={myImg.src} alt="" />
           </div>
         </footer>
-      </Link>
+      </Link> */}
     </div>
   )
 }

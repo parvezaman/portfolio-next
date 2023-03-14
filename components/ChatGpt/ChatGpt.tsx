@@ -37,30 +37,27 @@ const ChatGpt = ({ }: Props) => {
         setLoading(false);
     }
     return (
-        <div className="h-screen flex flex-col items-center justify-center text-center overflow-hidden">
-            {/* <div className='flex flex-col items-center justify-center'> */}
+        <div className="h-screen flex relative flex-col text-center md:text-left md:flow-row max-w-7xl px-10 justify-evenly mx-auto items-center">
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-400 text-2xl'>Hello to ChatGPT</h3>
-            <textarea
-                // type="text"
-                value={prompt}
-                onChange={e => setPrompt(e.target.value)}
-                placeholder="So... What was wriggling in your precious head???"
-                className='contactInput w-96 h-48'
-            />
-            <button
-                onClick={handleSubmit}
-                disabled={loading || prompt.length === 0}
-                className="bg-[#aa5403] py-5 px-10 rounded-md text-gray-300 font-bold w-96"
-            >
-                {loading ? "Generating..." : "Generate"}
-            </button>
-            {/* </div> */}
-
-            {/* <div className='w-full overflow-scroll'> */}
+            <form className='flex flex-col space-y-2 w-fit mx-auto max-sm:w-74'>
+                <textarea
+                    // type="text"
+                    value={prompt}
+                    onChange={e => setPrompt(e.target.value)}
+                    placeholder="So... What was wriggling in your precious head???"
+                    className='contactInput w-96 h-48'
+                />
+                <button
+                    onClick={handleSubmit}
+                    disabled={loading || prompt.length === 0}
+                    className="bg-[#aa5403] py-5 px-10 rounded-md text-gray-300 font-bold w-96"
+                >
+                    {loading ? "Generating..." : "Generate"}
+                </button>
+            </form>
             <pre className='text-start'>
                 {result}
             </pre>
-            {/* </div> */}
         </div>
     )
 }

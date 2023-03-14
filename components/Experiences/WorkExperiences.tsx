@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import ExperienceCards from './ExperienceCards'
 import ExperienceCards2 from './ExperienceCards2'
+import ExperienceCards3 from './ExperienceCards3'
 
 type Props = {}
 
@@ -20,6 +21,7 @@ export default function WorkExperiences({ }: Props) {
             <div
                 className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory mt-32 scrollbar scrollbar-thumb-blue-600 scrollbar-thumb-rounded'
             >
+                <ExperienceCards3 />
                 <ExperienceCards />
                 <ExperienceCards2 />
             </div>
